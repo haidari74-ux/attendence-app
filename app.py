@@ -17,10 +17,10 @@ st.title("📋 سجل الحضور والغياب")
 
 # --- أولاً: الهيكلة المحدثة (بدون كلمة صف) ---
 levels_config = {
-    "٦ب": [f"٦ب{i}" for i in range(1, 8)],
-    "١ع": [f"١ع{i}" for i in range(1, 7)],
-    "٢ع": [f"٢ع{i}" for i in range(1, 8)],
-    "٣ع": [f"٣ع{i}" for i in range(1, 7)]
+    "٦ب": [f"6ب{i}" for i in range(1, 8)],
+    "١ع": [f"1ع{i}" for i in range(1, 7)],
+    "٢ع": [f"2ع{i}" for i in range(1, 8)],
+    "٣ع": [f"3ع{i}" for i in range(1, 7)]
 }
 
 subjects = ["التربية الاسلامية", "اللغة العربية", "اللغة الانجليزية", "الرياضيات", "العلوم", "المواد الاجتماعية"]
@@ -104,4 +104,5 @@ if students_df is not None:
 if st.checkbox("👁️ عرض سجلات اليوم"):
     if os.path.exists("attendance_records.csv"):
         st.table(pd.read_csv("attendance_records.csv").tail(15))
+
 
